@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--=============== FAVICON ===============-->
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+     <!--=============== REMIXICONS ===============-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
+
+     <!--=============== SWIPER CSS ===============-->
+     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+
+     <!--=============== CSS ===============-->
+     <link rel="stylesheet" href="assets/css/styles.css">
+
+   <title>Judith's website
+   </title>
+</head>
+
+<body>
+   <header class="header" id = "header">
+      <nav class="nav container">
+         <!-- <a href="#" class="nav__logo"> -->
+            <!-- <i class="ri-book-3-line"> </i>E-Book -->
+         <!-- </a> -->
+          <img src="assets/img/cat1.jpeg" alt="cat" class="logo-image">
+         <div class="nav__menu">
+               <ul class="nav__list">
+                  <li class="nav__item">
+                     <a href="#home" class="nav__link active-link">
+                        <!-- <i class="ri-home-line"></i> -->
+                        <i class="ri-task-line"></i>
+                        <span>Home</span>
+                     </a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="#current_read" class="nav__link">
+                        <i class="ri-book-3-line"></i>
+                        <span>Currently Reading</span>
+                     </a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="#new" class="nav__link">
+                        <!-- <i class="ri-bookmark-line"></i> -->
+                        <i class="ri-graduation-cap-line"></i>
+                        <span>Skills</span>
+                     </a>
+                  </li>
+                  <li class="nav__item">
+                     <a href="#interests" class="nav__link">
+                        <!-- <i class="ri-message-3-line"></i> -->
+                        <i class="ri-user-heart-line"></i>
+                        <span>Interests</span>
+                     </a>
+                  </li>
+               </ul>
+
+         </div>
+         <div class="nav__actions">
+
+              <!-- Search button -->
+              <i class="ri-search-line search-button" id="search-button"></i>
+               
+              <!-- Login button -->
+              <i class="ri-user-line login-button" id="login-button"></i>
+
+              <!-- Theme button -->
+              <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+         </div>
+      </nav>
+   </header>
+  <!--==================== SEARCH ====================-->
+    <div class="search" id="search-content">
+      <form id="form1" action="search__form">
+         <i class="ri-search-line search__icon"></i>
+            <input type="search" placeholder="What are you looking for?" class="search__input">
+      </form>
+      <i class="ri-close-line search__close" id="search-close"></i>
+   </div>
+<!--==================== LOGIN ====================-->
+<div class="login grid" id="login-content">
+   <form action="" class="login__form grid">
+      <h3 class="login__title">Log In</h3>
+      <div class="login__group grid">
+         <div>
+            <label for="login-email" class="login__label">Email</label>
+            <input type="email" placeholder="Write your email" id="login-email" class="login__input">
+         </div>
+         
+         <div>
+            <label for="login-pass" class="login__label">Password</label>
+            <input type="password" placeholder="Enter your password" id="login-pass" class="login__input">
+         </div>
+      </div>
+      <div>
+         <span class="login__signup">
+            You do not have an account? <a href="#">Sign up</a>
+         </span>
+
+         <a href="#" class="login__forgot">
+            You forgot your password
+         </a>
+
+         <button type="submit" class="login__button button">Log In</button>
+      </div>
+   </form>
+   <i class="ri-close-line login__close" id="login-close"></i>
+</div>      
+  <!--==================== MAIN ====================-->
+<main class="main">
+   <section class="home section" id="home">
+      <div class="home__container container grid">
+         <div class="home__data">
+            <h1 class="home__title">
+               My Personl  <br>
+               Projects
+            </h1>
+
+            <p class="home__description">
+               These are some of my personal projects for learning and fun!
+            </p>
+
+            
+            <a href="my_study_case.html" class="button">Explore Now</a>
+         </div>
+
+         <div class="home__images">
+            <div class="home__swiper swiper">
+               <div class="swiper-wrapper">
+                  <article class="home__article swiper-slide">
+                     <img src="assets/img/oncology.jpg" alt="image" class="home__img">
+                  </article>
+
+                  <article class="home__article swiper-slide">
+                     <img src="assets/img/scrna.jpg" alt="image" class="home__img">
+                  </article>
+
+                  <article class="home__article swiper-slide">
+                     <img src="assets/img/imagej.jpg" alt="image" class="home__img">
+                  </article>
+
+                  <article class="home__article swiper-slide">
+                     <img src="assets/img/nlp.jpg" alt="image" class="home__img">
+                  </article>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!--==================== FEATURED (Current Reading) ====================-->
+   <section class="featured section" id="current_read">
+      <h2 class="section__title">
+         Currently Reading Books
+      </h2>
+
+      <div class="featured__container container">
+         <div class="featured__swiper swiper">
+            <div class="swiper-wrapper">
+               <article class="featured__card swiper-slide">
+                  <img id="image00" src="assets/img/book-1.png" alt="image" class="featured__img">
+
+                  <h2 class="featured__title">Featured Book</h2>
+                  <div class="featured__prices">
+                     <span class="featured__discount">
+                     <!-- <a href="https://www.amazon.com/gp/product/103240891X/ref=ppx_yo_dt_b_search_asin_image?ie=UTF8&psc=1"  -->
+                     <!-- target="_blank" rel="noopener noreferrer">Amazone Link -->
+                     <!-- </a> -->
+                     
+                     </span>
+                  </div>
+
+                  <!-- <button class="button">Add Your Comment</button> -->
+
+                  <!-- Overlay for preview details -->
+
+                  <div class="featured__actions">
+                     <button id="zoomBtn" class="amplify-button"><i class="ri-search-line"></i></button>
+
+                     <button><i class="ri-heart-3-line"></i></button>
+                     <span class="like-count">0</span> <!-- Like count element -->
+
+                     <button><i class="ri-eye-line"></i></button>
+                  </div>
+               </article>
+
+               <article class="featured__card swiper-slide">
+                  <img src="assets/img/book2.png" alt="image" class="featured__img">
+
+                  <h2 class="featured__title">Featured Book</h2>
+                  <!-- <div class="featured__prices">
+                     <span class="featured__discount">$11.99</span>
+                     <span class="featured__price">$19.99</span>
+                  </div> -->
+
+                  <!-- <button class="button">Add To Cart</button> -->
+
+                  <div class="featured__actions">
+                     <button id="zoomBtn" class="amplify-button"><i class="ri-search-line"></i></button>
+                     <button><i class="ri-heart-3-line"></i></button>
+                     <span class="like-count">0</span> <!-- Like count element -->
+                     <button><i class="ri-eye-line"></i></button>
+                  </div>
+               </article>
+
+               <article class="featured__card swiper-slide">
+                  <img src="assets/img/book3.png" alt="image" class="featured__img">
+
+                  <h2 class="featured__title">Featured Book</h2>
+                  <!-- <div class="featured__prices">
+                     <span class="featured__discount">$11.99</span>
+                     <span class="featured__price">$19.99</span>
+                  </div>
+
+                  <button class="button">Add To Cart</button> -->
+
+                  <div class="featured__actions">
+                     <button id="zoomBtn" class="amplify-button"><i class="ri-search-line"></i></button>
+                     <button><i class="ri-heart-3-line"></i></button>
+                     <span class="like-count">0</span> <!-- Like count element -->
+                     <button><i class="ri-eye-line"></i></button>
+                  </div>
+               </article>
+
+               <article class="featured__card swiper-slide">
+                  <img src="assets/img/book4.png" alt="image" class="featured__img">
+
+                  <h2 class="featured__title">Featured Book</h2>
+                  <!-- <div class="featured__prices">
+                     <span class="featured__discount">$11.99</span>
+                     <span class="featured__price">$19.99</span>
+                  </div>
+
+                  <button class="button">Add To Cart</button> -->
+
+                  <div class="featured__actions">
+                     <button id="zoomBtn" class="amplify-button"><i class="ri-search-line"></i></button>
+                     <button><i class="ri-heart-3-line"></i></button>
+                     <span class="like-count">0</span> <!-- Like count element -->
+                     <button><i class="ri-eye-line"></i></button>
+                  </div>
+               </article>
+               
+               <article class="featured__card swiper-slide">
+                  <img src="assets/img/book5.png" alt="image" class="featured__img">
+
+                  <h2 class="featured__title">Featured Book</h2>
+                  <!-- <div class="featured__prices">
+                     <span class="featured__discount">$11.99</span>
+                     <span class="featured__price">$19.99</span>
+                  </div>
+
+                  <button class="button">Add To Cart</button> -->
+
+                  <div class="featured__actions">
+                     <button id="zoomBtn" class="amplify-button"><i class="ri-search-line"></i></button>
+                     <button><i class="ri-heart-3-line"></i></button>
+                     <span class="like-count">0</span> <!-- Like count element -->
+                     <button><i class="ri-eye-line"></i></button>
+                  </div>
+               </article>
+
+               <article class="featured__card swiper-slide">
+                  <img src="assets/img/book6.png" alt="image" class="featured__img">
+
+                  <h2 class="featured__title">Featured Book</h2>
+                  <!-- <div class="featured__prices">
+                     <span class="featured__discount">$11.99</span>
+                     <span class="featured__price">$19.99</span>
+                  </div>
+
+                  <button class="button">Add To Cart</button> -->
+
+                  <div class="featured__actions">
+                     <button id="zoomBtn" class="amplify-button"><i class="ri-search-line"></i></button>
+                     <button><i class="ri-heart-3-line"></i></button>
+                     <span class="like-count">0</span> <!-- Like count element -->
+                     <button><i class="ri-eye-line"></i></button>
+                  </div>
+               </article>
+
+               <article class="featured__card swiper-slide">
+                  <img src="assets/img/book7.png" alt="image" class="featured__img">
+
+                  <h2 class="featured__title">Featured Book</h2>
+                  <!-- <div class="featured__prices">
+                     <span class="featured__discount">$11.99</span>
+                     <span class="featured__price">$19.99</span>
+                  </div>
+
+                  <button class="button">Add To Cart</button> -->
+
+                  <div class="featured__actions">
+                     <button id="zoomBtn" class="amplify-button"><i class="ri-search-line"></i></button>
+                     <button><i class="ri-heart-3-line"></i></button>
+                     <span class="like-count">0</span> <!-- Like count element -->
+                     <button><i class="ri-eye-line"></i></button>
+                  </div>
+               </article>
+
+               <article class="featured__card swiper-slide">
+                  <img src="assets/img/book8.png" alt="image" class="featured__img">
+
+                  <h2 class="featured__title">Featured Book</h2>
+                  <!-- <div class="featured__prices">
+                     <span class="featured__discount">$11.99</span>
+                     <span class="featured__price">$19.99</span>
+                  </div>
+
+                  <button class="button">Add To Cart</button> -->
+
+                  <div class="featured__actions">
+                     <button id="zoomBtn" class="amplify-button"><i class="ri-search-line"></i></button>
+                     <button><i class="ri-heart-3-line"></i></button>
+                     <span class="like-count">0</span> <!-- Like count element -->
+                     <button><i class="ri-eye-line"></i></button>
+                  </div>
+               </article>
+
+               <article class="featured__card swiper-slide">
+                  <img src="assets/img/book9.png" alt="image" class="featured__img">
+
+                  <h2 class="featured__title">Featured Book</h2>
+                  <!-- <div class="featured__prices">
+                     <span class="featured__discount">$11.99</span>
+                     <span class="featured__price">$19.99</span>
+                  </div>
+
+                  <button class="button">Add To Cart</button> -->
+
+                  <div class="featured__actions">
+                     <button id="zoomBtn" class="amplify-button"><i class="ri-search-line"></i></button>
+                     <button><i class="ri-heart-3-line"></i></button>
+                     <span class="like-count">0</span> <!-- Like count element -->
+                     <button><i class="ri-eye-line"></i></button>
+                  </div>
+               </article>
+
+               <article class="featured__card swiper-slide">
+                  <img src="assets/img/book10.png" alt="image" class="featured__img">
+
+                  <h2 class="featured__title">Featured Book</h2>
+                  <!-- <div class="featured__prices">
+                     <span class="featured__discount">$11.99</span>
+                     <span class="featured__price">$19.99</span>
+                  </div>
+
+                  <button class="button">Add To Cart</button> -->
+
+                  <div class="featured__actions">
+                     <button id="zoomBtn" class="amplify-button"><i class="ri-search-line"></i></button>
+                     <button  class="like-button"><i class="ri-heart-3-line"></i></button>
+                     <span class="like-count">0</span> <!-- Like count element -->
+                     <button><i class="ri-eye-line"></i></button>
+                  </div>
+               </article>
+            </div>
+
+            <div class="swiper-button-prev">
+               <i class="ri-arrow-left-s-line"></i>
+            </div>
+
+            <div class="swiper-button-next">
+               <i class="ri-arrow-right-s-line"></i>
+            </div>
+         </div>
+      </div>
+   </section> 
+
+      <!--==================== NEW BOOKS (Planned Reading) ====================-->
+      <section class="new section" id="new">
+         <h2 class="section__title">
+            Some of My Skills
+         </h2>
+         <div class="skill">
+
+            <div class="skill-name">Medical Data</div>
+            <div class="skill-bar">
+                <div class="skill-fill" style="width: 100%;"> </div>
+                <span class="skill-percentage">100%</span>
+            </div>
+            <br><br>
+            <div class="skill-name">Statistical Analysis</div>
+            <div class="skill-bar">
+                <div class="skill-fill" style="width: 100%;"> </div>
+                <span class="skill-percentage">100%</span>
+            </div>
+
+            <br><br>
+            <div class="skill-name">Client Consulting</div>
+            <div class="skill-bar">
+                <div class="skill-fill" style="width: 100%;"> </div>
+                <span class="skill-percentage">100%</span>
+            </div>
+
+            
+
+            <br><br>
+            <div class="skill-name">Machine Learning</div>
+            <div class="skill-bar">
+                <div class="skill-fill" style="width: 80%;"> </div>
+                <span class="skill-percentage">80%</span>
+            </div>
+            <br><br>
+
+            
+            <div class="skill-name">Userbility Testing</div>
+            <div class="skill-bar">
+                <div class="skill-fill" style="width: 100%;"> </div>
+                <span class="skill-percentage">100%</span>
+            </div>
+            <br><br>
+            <div class="skill-name">User Research</div>
+            <div class="skill-bar">
+                <div class="skill-fill" style="width: 80%;"> </div>
+                <span class="skill-percentage">80%</span>
+            </div>
+
+            <br><br>
+            <div class="skill-name">Web Development</div>
+            <div class="skill-bar">
+                <div class="skill-fill" style="width: 80%;"> </div>
+                <span class="skill-percentage">80%</span>
+            </div>
+
+            
+            <br><br>
+            <div class="skill-name">Scrum Project Management</div>
+            <div class="skill-bar">
+                <div class="skill-fill" style="width: 80%;"> </div>
+                <span class="skill-percentage">80%</span>
+            </div>
+            <br><br>
+            <div class="skill-name">SQL PL/SQL</div>
+            <div class="skill-bar">
+                <div class="skill-fill" style="width: 100%;"> </div>
+                <span class="skill-percentage">100%</span>
+            </div>
+               <br><br>
+            <div class="skill-name">PySpark</div>
+            <div class="skill-bar">
+                <div class="skill-fill" style="width: 100%;"> </div>
+                <span class="skill-percentage">100%</span>
+            </div>
+            <br><br>
+            <div class="skill-name">SAS</div>
+            <div class="skill-bar">
+                <div class="skill-fill" style="width: 90%;"> </div>
+                <span class="skill-percentage">90%</span>
+            </div>
+        </div>
+             
+      </section>   
+      <!-- <br><br> -->
+      <section class="interests-container" id="interests">
+         <h1>My Interests</h1>
+         <br>
+         <div class="grid-container1">
+           <div class="grid-item1">
+             <img src="assets/img/reading.jpeg" alt="Reading" class="interest-image">
+             <p>Reading</p>
+           </div>
+           <div class="grid-item1">
+             <img src="assets/img/violin.jpeg" alt="Violin" class="interest-image">
+             <p>Violin</p>
+           </div>
+           <div class="grid-item1">
+             <img src="assets/img/drawing.jpeg" alt="Drawing" class="interest-image">
+             <p>Drawing</p>
+           </div>
+           <div class="grid-item1">
+             <img src="assets/img/dancing.jpeg" alt="Dancing" class="interest-image">
+             <p>Dancing</p>
+           </div>
+         </div>
+       </section>
+      
+</main>    
+<footer class="footer">
+   <div class="footer__container container grid">
+  
+      <span class="footer__copy">
+         &#169; All Rights Reserved By Le Yang
+      </span>
+
+</footer>
+  <!--========== SCROLL UP ==========-->
+  <a href="#" class="scrollup" id="scroll-up">
+   <i class="ri-arrow-up-line"></i>
+   
+</a>
+
+
+<!--=============== SCROLLREVEAL ===============-->
+<script src="assets/js/scrollreveal.min.js"></script>
+
+<!--=============== SWIPER JS ===============-->
+<script src="assets/js/swiper-bundle.min.js"></script>
+<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>    -->
+
+<!--=============== MAIN JS ===============-->
+<script src="assets/js/main.js"></script>
+
+<!-- <script src="assets/js/newly-added.js"></script> -->
+
+
+</body>
+</html>

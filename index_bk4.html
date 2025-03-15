@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PubMed Records</title>
+    <style>
+        /* Basic styling for table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 18px;
+            text-align: left;
+        }
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <h1>PubMed Records</h1>
+    <table id="recordsTable">
+        <thead>
+            <tr id="tableHeader"></tr>
+        </thead>
+        <tbody id="tableBody">
+            <!-- Rows will be populated here by JavaScript -->
+        </tbody>
+    </table>
+
+    <!-- Link to the external JavaScript file -->
+    <script src="assets/js/fetchRecords.js"></script>
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EMR data using NLP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section p {
+            line-height: 1.6;
+        }
+        ul {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+        .example-list {
+            margin-top: 10px;
+            padding-left: 40px;
+            list-style-type: circle;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Understanding Named Entity Recognition (NER)</h1>
+    
+    <div class="section">
+        <h2>1. What is NER?</h2>
+        <p>Named Entity Recognition (NER) is a Natural Language Processing (NLP) technique used to identify and classify key pieces of information (entities) within text. The goal of NER is to locate specific words or phrases in a text and label them as belonging to certain predefined categories.</p>
+    </div>
+    
+    <div class="section">
+        <h2>2. Key Concepts in NER</h2>
+        <p>Named Entities are specific pieces of information in the text, such as:</p>
+        <ul>
+            <li>Person Names: e.g., <em>"Albert Einstein"</em></li>
+            <li>Organizations: e.g., <em>"Microsoft," "United Nations"</em></li>
+            <li>Locations: e.g., <em>"Paris," "Mount Everest"</em></li>
+            <li>Dates and Times: e.g., <em>"January 1, 2024," "10:00 AM"</em></li>
+            <li>Other Domain-Specific Entities: NER can be customized to detect entities specific to a field, like diseases and medications in healthcare, or product names in e-commerce.</li>
+        </ul>
+    </div>
+    
+    <div class="section">
+        <h2>3. Classification in NER</h2>
+        <p>NER not only detects entities but also categorizes them. For example, the word <em>"Tesla"</em> might be classified as an "Organization" or "Product," depending on the context.</p>
+    </div class="section">
+        <h2>4. Data
+        </h2>
+        <h3>4.1 Data Source</Data></h3>
+        <p>
+        EMR data refers to the digital version of a patient's paper medical chart. It contains comprehensive health-related information about a patient, which is collected and maintained 
+        by healthcare providers over time. EMR data plays a crucial role in healthcare delivery, analytics, and research.
+        </p>
+
+        <p>I am using an EMR data from kaggle website, the data is like below:</p>
+        <img src="assets/img/emr.png" alt="EMR Data Sample" width="500" height="300">
+        <p>The original dataset has 3384 rows and 5 columns. </p>
+
+        <h3>4.2 Data Cleaning</Data></h3>
+        <p>Two columns description and transcripton were processed with data cleaning, special characters and 
+            numbers were removed, all letters were lowered cased. 
+        </p>
+
+        <h2>5. NLP</h2>
+        <P>Spacy is a popular library for Natural Language Processing (NLP).
+           It provides tools for tokenization, part-of-speech tagging, dependency parsing, 
+           and named entity recognition (NER).
+           The spaCy pipeline Tokenizes the text into words. Applies the NER model to classify phrases 
+           or words into entity categories.The pre-trained model en_ner_bc5cdr_md is trained on biomedical 
+           text, so it specializes in identifying entities like diseases or chemicals.
+            <br>
+            <br>
+           In this study, the top 3 name entities of diseases and chemicals for each transcripton are extracted. 
+            <br>
+           The final output is like below:
+           <br>
+           <br>
+           <img src="assets/img/top_entity.png" alt="EMR Data Sample" width="500" height="300">
+        </P>
+        <h2>6. Future Work</h2>
+        <p>
+            If we know the diagnosis for some records, we could predict the unknown diagnosis based on the name 
+            entities like diseases and chemicals. 
+        </p>
+
+        <h2>7. References</h2>
+        <p>
+            <a href="https://www.kaggle.com/code/wuneng/case-study-for-ner/edit">Kaggle Link</a>
+            <br><br>
+            
+        </p>
+    </div>
+
+    </div>
+</div>
+
+</body>
+</html>

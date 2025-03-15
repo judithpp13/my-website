@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ImageJ Case Study</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section p {
+            line-height: 1.6;
+        }
+        ul {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+        .example-list {
+            margin-top: 10px;
+            padding-left: 40px;
+            list-style-type: circle;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Using ImageJ to Analyze Stained Blood Cells</h1>
+    
+    <div class="section">
+        <h2>1. What is ImageJ?</h2>
+        <p>
+            ImageJ is an open-source software designed for image analysis, particularly useful in scientific research and medical imaging. 
+            It was developed by Wayne Rasband at the National Institutes of Health (NIH). It's widely used for processing and analyzing images, 
+            especially in fields like biology, microscopy, and medical imaging.    
+        </p>
+    </div>
+    
+    <div class="section">
+        <h2>2. About Dataset</h2>
+        <p>The stained cell image is obtained from Kaggle open dataset. Malaria microscopy, microscopic examination of stained blood slides to detect parasite Plasmodium, 
+            is considered to be a gold-standard for detecting life-threatening disease malaria. The image is one stained blood cell from this 
+            malaria dataset. 
+        </p>
+        
+    </div>
+    
+    <div class="section">
+        <h2>3. Steps</h2>
+        <h3>3.1 Open the image in the ImageJ</h3>
+        
+        Drag the picutre onto the ImageJ and adjust the type to 8-bit. 
+        <br><br>
+        <img src="assets/img/imagej1.png" alt="ImageJ1" width="400" height="400">
+        <h3>3.2 Adjust picutre contrast</h3>
+        In order to enhance the pixel contrast of the picture, click Image/Adjust/Brightness/Contrast, 
+        select 'Auto', the picture turns to be black and white contrast style. 
+        <br><br>
+        <img src="assets/img/imagej2.png" alt="ImageJ2" width="400" height="400">
+        <h3>3.3 Set a proper threshold</h3>
+        <p>
+        To separate objects of interest in the image from the background based on pixel intensity values. 
+        Click Image/Threshold to set up a proper range. 
+        This is a crucial step in image segmentation, which allows you to identify and analyze regions or objects within an image.   
+        <br><br>
+        <img src="assets/img/imagej3.png" alt="ImageJ3" width="400" height="400">
+        </p>
+        <h3>3.4 Perform Analysis</h3>
+        <p>Click Analyze/Analyze Particles, set a proper size for the image, here I chose 70 since I would estimate
+            the cells in the picutre would be around 70. Set other parameters like outlier, overlay etc. based on your purpose.
+        </p>
+    </div class="section">
+        <h2>4. Results
+        </h2>
+        <p> The system provides four outcomes:
+
+            1.	Summary Report: Offers an overview including the total cell count, total area, average size, integrated density (IntDen), and other key metrics.
+            2.	Results Report: Details metrics for each identified cell individually.
+            3.	ROI Manager: Enables users to customize individual cell selections by adding, deleting, or updating circles. Selecting a specific cell highlights it in the drawing for precise adjustments. 
+        </p>
+        <br>
+        <img src="assets/img/imagej4.png" alt="ImageJ3" width="400" height="400">
+        <h2>5. Future Work</h2>
+        <p>
+            If you have a complete dataset of both healthy and malaria-infected blood cells, Integrated Density (IntDen) can be used for quantitative image analysis to compare the two groups. 
+            By analyzing IntDen, you can evaluate differences in fluorescence intensity, which often correlate with variations in biomarker levels or metabolic activity.
+            
+            <ul>
+                <li>Increased IntDen in Diseased Cells: May indicate overexpression of a protein, aggregation, or increased metabolic activity.</li>
+                <li>Decreased IntDen in Diseased Cells: Could reflect reduced expression, signal loss, or cell death.</li>
+              </ul> 
+            
+            This approach provides a robust method for assessing cellular changes associated with health and disease.
+        </p>
+
+        <h2>6. References</h2>
+        <p>
+            <a href="https://www.kaggle.com/datasets/qaziammararshad/iml-malaria">Kaggle Link</a>
+            <br><br>
+            <a href="https://imagej.net/ij/features.html">ImageJ</a>
+        </p>
+    </div>
+
+    </div>
+</div>
+
+</body>
+</html>
