@@ -1337,24 +1337,20 @@ header {
   aspect-ratio: 3 / 2;
   text-align: left;
   padding: 16px;
-  /* background-color: #f0f0f0; */
-  /* border: 1px solid #ccc; */
+  
+  overflow-y: auto;
+  max-height: 60vh; /* prevents overflow from screen */
+  overscroll-behavior: contain; /* stops body scroll hijacking */
 
-  /* Fixes for small screens */
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 120px; 
-  /* ensures enough height on small viewports */
-  /* overflow: hidden;  */
-  /* prevents weird text spillover */
-  /* box-sizing: border-box;  */
-
-  overflow-y: auto;        /* allow scrolling if needed */
   display: flex;
   flex-direction: column;
   justify-content: start;
 }
+
+.grid-2x2 div a:last-child {
+  margin-bottom: 12px;
+}
+
 .case-image {
   width: 200px; /* Set a fixed width */
   height: 150px; /* Set a fixed height */
