@@ -1321,7 +1321,29 @@ header {
   overflow: hidden;
 }
 
+/* add a new grid .container on 3/29/2024 */
 
+.grid-2x2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px;
+  /* box-sizing: border-box; */
+}
+
+.grid-2x2 div {
+  /* background-color: #f0f0f0; */
+  aspect-ratio: 3 / 2; /* Wider than tall (landscape rectangle) */
+  text-align: left;
+  /* border: 1px solid #ccc; */
+  /* display: flex; */
+  align-items: center;
+  /* justify-content: center; */
+  /* font-weight: bold; */
+  /* font-size: 1.2em; */
+}
 .case-image {
   width: 200px; /* Set a fixed width */
   height: 150px; /* Set a fixed height */
@@ -1367,4 +1389,32 @@ header {
   display: block; /* Ensure proper rendering */
   border: 2px solid #ccc; /* Optional: Add a border around the logo */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for better visuals */
+}
+
+/* add .pagination on 3/29/2025 */
+.pagination {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.pagination a {
+  color: black;
+  padding: 8px 14px;
+  text-decoration: none;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.pagination a:hover {
+  background-color: #f1f1f1;
+}
+
+.pagination a.active {
+  background-color: #007bff;
+  color: white;
+  border: 1px solid #007bff;
 }
