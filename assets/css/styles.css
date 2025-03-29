@@ -1341,12 +1341,19 @@ header {
   /* border: 1px solid #ccc; */
 
   /* Fixes for small screens */
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 120px; /* ensures enough height on small viewports */
-  overflow: hidden; /* prevents weird text spillover */
-  box-sizing: border-box;
+  min-height: 120px; 
+  /* ensures enough height on small viewports */
+  /* overflow: hidden;  */
+  /* prevents weird text spillover */
+  /* box-sizing: border-box;  */
+
+  overflow-y: auto;        /* allow scrolling if needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
 }
 .case-image {
   width: 200px; /* Set a fixed width */
