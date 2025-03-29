@@ -1334,15 +1334,19 @@ header {
 }
 
 .grid-2x2 div {
-  /* background-color: #f0f0f0; */
-  aspect-ratio: 3 / 2; /* Wider than tall (landscape rectangle) */
+  aspect-ratio: 3 / 2;
   text-align: left;
+  padding: 16px;
+  /* background-color: #f0f0f0; */
   /* border: 1px solid #ccc; */
-  /* display: flex; */
-  align-items: center;
-  /* justify-content: center; */
-  /* font-weight: bold; */
-  /* font-size: 1.2em; */
+
+  /* Fixes for small screens */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 120px; /* ensures enough height on small viewports */
+  overflow: hidden; /* prevents weird text spillover */
+  box-sizing: border-box;
 }
 .case-image {
   width: 200px; /* Set a fixed width */
